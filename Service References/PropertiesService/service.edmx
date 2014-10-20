@@ -1,0 +1,342 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="RESOServicesModel" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="PROPERTY">
+        <Key>
+          <PropertyRef Name="ListingId" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ListingId" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="OriginatingSystemName" Type="Edm.String" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="OriginatingSystemKey" Type="Edm.String" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="MLSStatus" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="ListingContractDate" Type="Edm.DateTime" Precision="0" />
+        <Property Name="ContractStatusChangeDate" Type="Edm.DateTime" Precision="0" />
+        <Property Name="PurchaseContractDate" Type="Edm.DateTime" Precision="0" />
+        <Property Name="CloseDate" Type="Edm.DateTime" Precision="0" />
+        <Property Name="StatusChangeTimestamp" Type="Edm.DateTime" Precision="0" />
+        <Property Name="DaysOnMarket" Type="Edm.Int32" />
+        <Property Name="ClosePrice" Type="Edm.Decimal" Precision="14" Scale="2" />
+        <Property Name="ListPrice" Type="Edm.Decimal" Precision="14" Scale="2" />
+        <Property Name="OriginalListPrice" Type="Edm.Decimal" Precision="14" Scale="2" />
+        <Property Name="ListPriceLow" Type="Edm.Decimal" Precision="14" Scale="2" />
+        <Property Name="PreviousListPrice" Type="Edm.Decimal" Precision="14" Scale="2" />
+        <Property Name="VOWEntireListingDisplayYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="VOWAutomatedValuationDisplayYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="PhotosCount" Type="Edm.Int32" />
+        <Property Name="PublicRemarks" Type="Edm.String" MaxLength="4000" FixedLength="false" Unicode="false" />
+        <Property Name="ShowingInstructions" Type="Edm.String" MaxLength="4000" FixedLength="false" Unicode="false" />
+        <Property Name="PropertyType" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="PropertySubType" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="LotSizeAcres" Type="Edm.Decimal" Precision="14" Scale="2" />
+        <Property Name="LotSizeSquareFeet" Type="Edm.Decimal" Precision="14" Scale="2" />
+        <Property Name="View" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="false" />
+        <Property Name="ViewYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="LotFeatures" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="false" />
+        <Property Name="CurrentUse" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="false" />
+        <Property Name="Topography" Type="Edm.String" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="HorseYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="PoolFeatures" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="false" />
+        <Property Name="PoolPrivateYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="BedroomsTotal" Type="Edm.Int32" />
+        <Property Name="BathroomsTotalInteger" Type="Edm.Int32" />
+        <Property Name="LivingArea" Type="Edm.String" MaxLength="200" FixedLength="false" Unicode="false" />
+        <Property Name="BuildingAreaTotal" Type="Edm.Decimal" Precision="14" Scale="2" />
+        <Property Name="GarageYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="GarageSpaces" Type="Edm.String" MaxLength="200" FixedLength="false" Unicode="false" />
+        <Property Name="StoriesTotal" Type="Edm.Int32" />
+        <Property Name="YearBuilt" Type="Edm.Int32" />
+        <Property Name="NewConstructionYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="TaxAnnualAmount" Type="Edm.Decimal" Precision="14" Scale="2" />
+        <Property Name="BasementYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="FirePlaceYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="ForcedAirYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="ForeClosureYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="GateCommunityYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="GolfCourseYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="WaterfrontYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="ElevatorYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="BalconyYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="GardenYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="MultiLevelYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="DiningRoomYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="LiveWorkYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="FurnishedYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="PetsYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="AirConditioningYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="UtilitiesIncludedYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="StorageYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="RoofGardenYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="BoardApprovalYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="ReoYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="ShortSaleYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="PreForeClosureYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <Property Name="DistressedYN" Type="Edm.String" MaxLength="1" FixedLength="true" Unicode="false" />
+        <NavigationProperty Name="AGENTOFFICES" Relationship="RESOServicesModel.PROPERTY_AGENTOFFICES" ToRole="AGENTOFFICE" FromRole="PROPERTY" />
+        <NavigationProperty Name="LOCATIONS" Relationship="RESOServicesModel.PROPERTY_LOCATIONS" ToRole="LOCATION" FromRole="PROPERTY" />
+      </EntityType>
+      <EntityType Name="AGENTOFFICE">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ListingId" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="TypeId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        <NavigationProperty Name="PROPERTY" Relationship="RESOServicesModel.PROPERTY_AGENTOFFICES" ToRole="PROPERTY" FromRole="AGENTOFFICE" />
+        <NavigationProperty Name="LISTAGENT" Relationship="RESOServicesModel.LISTAGENT_AGENTOFFICES" ToRole="LISTAGENT" FromRole="AGENTOFFICE" />
+        <NavigationProperty Name="LISTOFFICE" Relationship="RESOServicesModel.LISTOFFICE_AGENTOFFICES" ToRole="LISTOFFICE" FromRole="AGENTOFFICE" />
+        <NavigationProperty Name="COLISTAGENT" Relationship="RESOServicesModel.COLISTAGENT_AGENTOFFICES" ToRole="COLISTAGENT" FromRole="AGENTOFFICE" />
+      </EntityType>
+      <EntityType Name="COLISTAGENT">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ListingId" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="CoListAgentFullName" Type="Edm.String" MaxLength="150" FixedLength="false" Unicode="false" />
+        <Property Name="CoListAgentPreferredPhone" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="CoListAgentOfficePhone" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="CoListAgentEmail" Type="Edm.String" MaxLength="80" FixedLength="false" Unicode="false" />
+        <NavigationProperty Name="AGENTOFFICES" Relationship="RESOServicesModel.COLISTAGENT_AGENTOFFICES" ToRole="AGENTOFFICE" FromRole="COLISTAGENT" />
+      </EntityType>
+      <EntityType Name="LISTAGENT">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ListingId" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="ListAgentFullName" Type="Edm.String" MaxLength="150" FixedLength="false" Unicode="false" />
+        <Property Name="ListAgentPreferredPhone" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="ListAgentOfficePhone" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="ListAgentCellPhone" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="ListAgentFax" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="ListAgentPager" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="ListAgentEmail" Type="Edm.String" MaxLength="80" FixedLength="false" Unicode="false" />
+        <Property Name="ListAgentURL" Type="Edm.String" MaxLength="8000" FixedLength="false" Unicode="false" />
+        <Property Name="ListAgentMlsId" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="false" />
+        <Property Name="ListAgentStateLicense" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <NavigationProperty Name="AGENTOFFICES" Relationship="RESOServicesModel.LISTAGENT_AGENTOFFICES" ToRole="AGENTOFFICE" FromRole="LISTAGENT" />
+      </EntityType>
+      <EntityType Name="LISTOFFICE">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ListingId" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="ListOfficeName" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="ListOfficePhone" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="ListOfficeEmail" Type="Edm.String" MaxLength="80" FixedLength="false" Unicode="false" />
+        <Property Name="ListOfficeMlsId" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="false" />
+        <NavigationProperty Name="AGENTOFFICES" Relationship="RESOServicesModel.LISTOFFICE_AGENTOFFICES" ToRole="AGENTOFFICE" FromRole="LISTOFFICE" />
+      </EntityType>
+      <EntityType Name="LOCATION">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ListingId" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="PropertyId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TypeId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        <NavigationProperty Name="PROPERTY" Relationship="RESOServicesModel.PROPERTY_LOCATIONS" ToRole="PROPERTY" FromRole="LOCATION" />
+        <NavigationProperty Name="ADDRESS" Relationship="RESOServicesModel.ADDRESS_LOCATIONS" ToRole="ADDRESS" FromRole="LOCATION" />
+        <NavigationProperty Name="GIS" Relationship="RESOServicesModel.GIS_LOCATIONS" ToRole="GIS" FromRole="LOCATION" />
+        <NavigationProperty Name="SCHOOL" Relationship="RESOServicesModel.SCHOOL_LOCATIONS" ToRole="SCHOOL" FromRole="LOCATION" />
+      </EntityType>
+      <EntityType Name="ADDRESS">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ListingId" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="StreetNumber" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="false" />
+        <Property Name="StreetName" Type="Edm.String" MaxLength="100" FixedLength="false" Unicode="false" />
+        <Property Name="UnitNumber" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="false" />
+        <Property Name="City" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="StateOrProvince" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="false" />
+        <Property Name="PostalCode" Type="Edm.String" MaxLength="10" FixedLength="false" Unicode="false" />
+        <Property Name="PostalCodePlus4" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="false" />
+        <NavigationProperty Name="LOCATIONS" Relationship="RESOServicesModel.ADDRESS_LOCATIONS" ToRole="LOCATION" FromRole="ADDRESS" />
+      </EntityType>
+      <EntityType Name="GIS">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ListingId" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="Latitude" Type="Edm.Decimal" Precision="12" Scale="8" />
+        <Property Name="Longitude" Type="Edm.Decimal" Precision="12" Scale="8" />
+        <NavigationProperty Name="LOCATIONS" Relationship="RESOServicesModel.GIS_LOCATIONS" ToRole="LOCATION" FromRole="GIS" />
+      </EntityType>
+      <EntityType Name="SCHOOL">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ListingId" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        <Property Name="ElementarySchool" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="ElementarySchoolDistrict" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="MiddleOrJuniorSchool" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="MiddleOrJuniorSchoolDistrict" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="HighSchool" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="HighSchoolDistrict" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <NavigationProperty Name="LOCATIONS" Relationship="RESOServicesModel.SCHOOL_LOCATIONS" ToRole="LOCATION" FromRole="SCHOOL" />
+      </EntityType>
+      <EntityType Name="PROPERTY_OUTPUT">
+        <Key>
+          <PropertyRef Name="ProcessDateTime" />
+        </Key>
+        <Property Name="ProcessDateTime" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="Details" Type="Edm.String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="StatusCode" Type="Edm.String" MaxLength="10" FixedLength="false" Unicode="false" />
+        <Property Name="TotalFound" Type="Edm.Int32" />
+      </EntityType>
+      <Association Name="PROPERTY_AGENTOFFICES">
+        <End Type="RESOServicesModel.PROPERTY" Role="PROPERTY" Multiplicity="1" />
+        <End Type="RESOServicesModel.AGENTOFFICE" Role="AGENTOFFICE" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="PROPERTY">
+            <PropertyRef Name="ListingId" />
+          </Principal>
+          <Dependent Role="AGENTOFFICE">
+            <PropertyRef Name="ListingId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="PROPERTY_LOCATIONS">
+        <End Type="RESOServicesModel.PROPERTY" Role="PROPERTY" Multiplicity="1" />
+        <End Type="RESOServicesModel.LOCATION" Role="LOCATION" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="PROPERTY">
+            <PropertyRef Name="ListingId" />
+          </Principal>
+          <Dependent Role="LOCATION">
+            <PropertyRef Name="ListingId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="LISTAGENT_AGENTOFFICES">
+        <End Type="RESOServicesModel.LISTAGENT" Role="LISTAGENT" Multiplicity="1" />
+        <End Type="RESOServicesModel.AGENTOFFICE" Role="AGENTOFFICE" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="LISTAGENT">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="AGENTOFFICE">
+            <PropertyRef Name="TypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="LISTOFFICE_AGENTOFFICES">
+        <End Type="RESOServicesModel.LISTOFFICE" Role="LISTOFFICE" Multiplicity="1" />
+        <End Type="RESOServicesModel.AGENTOFFICE" Role="AGENTOFFICE" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="LISTOFFICE">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="AGENTOFFICE">
+            <PropertyRef Name="TypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="COLISTAGENT_AGENTOFFICES">
+        <End Type="RESOServicesModel.COLISTAGENT" Role="COLISTAGENT" Multiplicity="1" />
+        <End Type="RESOServicesModel.AGENTOFFICE" Role="AGENTOFFICE" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="COLISTAGENT">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="AGENTOFFICE">
+            <PropertyRef Name="TypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="ADDRESS_LOCATIONS">
+        <End Type="RESOServicesModel.ADDRESS" Role="ADDRESS" Multiplicity="1" />
+        <End Type="RESOServicesModel.LOCATION" Role="LOCATION" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="ADDRESS">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="LOCATION">
+            <PropertyRef Name="TypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="GIS_LOCATIONS">
+        <End Type="RESOServicesModel.GIS" Role="GIS" Multiplicity="1" />
+        <End Type="RESOServicesModel.LOCATION" Role="LOCATION" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="GIS">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="LOCATION">
+            <PropertyRef Name="TypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="SCHOOL_LOCATIONS">
+        <End Type="RESOServicesModel.SCHOOL" Role="SCHOOL" Multiplicity="1" />
+        <End Type="RESOServicesModel.LOCATION" Role="LOCATION" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="SCHOOL">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="LOCATION">
+            <PropertyRef Name="TypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+    </Schema>
+    <Schema Namespace="RESOServices.Models" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="PropertyEntities" m:IsDefaultEntityContainer="true" p6:LazyLoadingEnabled="true" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntitySet Name="PROPERTY" EntityType="RESOServicesModel.PROPERTY" />
+        <EntitySet Name="AGENTOFFICE" EntityType="RESOServicesModel.AGENTOFFICE" />
+        <EntitySet Name="COLISTAGENT" EntityType="RESOServicesModel.COLISTAGENT" />
+        <EntitySet Name="LISTAGENT" EntityType="RESOServicesModel.LISTAGENT" />
+        <EntitySet Name="LISTOFFICE" EntityType="RESOServicesModel.LISTOFFICE" />
+        <EntitySet Name="LOCATION" EntityType="RESOServicesModel.LOCATION" />
+        <EntitySet Name="ADDRESS" EntityType="RESOServicesModel.ADDRESS" />
+        <EntitySet Name="GIS" EntityType="RESOServicesModel.GIS" />
+        <EntitySet Name="SCHOOL" EntityType="RESOServicesModel.SCHOOL" />
+        <EntitySet Name="PROPERTY_OUTPUT" EntityType="RESOServicesModel.PROPERTY_OUTPUT" />
+        <FunctionImport Name="Property" ReturnType="Collection(RESOServicesModel.PROPERTY)" EntitySet="PROPERTY" m:HttpMethod="GET">
+          <Parameter Name="Id" Type="Edm.String" />
+        </FunctionImport>
+        <AssociationSet Name="PROPERTY_AGENTOFFICES" Association="RESOServicesModel.PROPERTY_AGENTOFFICES">
+          <End Role="PROPERTY" EntitySet="PROPERTY" />
+          <End Role="AGENTOFFICE" EntitySet="AGENTOFFICE" />
+        </AssociationSet>
+        <AssociationSet Name="PROPERTY_LOCATIONS" Association="RESOServicesModel.PROPERTY_LOCATIONS">
+          <End Role="PROPERTY" EntitySet="PROPERTY" />
+          <End Role="LOCATION" EntitySet="LOCATION" />
+        </AssociationSet>
+        <AssociationSet Name="LISTAGENT_AGENTOFFICES" Association="RESOServicesModel.LISTAGENT_AGENTOFFICES">
+          <End Role="AGENTOFFICE" EntitySet="AGENTOFFICE" />
+          <End Role="LISTAGENT" EntitySet="LISTAGENT" />
+        </AssociationSet>
+        <AssociationSet Name="LISTOFFICE_AGENTOFFICES" Association="RESOServicesModel.LISTOFFICE_AGENTOFFICES">
+          <End Role="AGENTOFFICE" EntitySet="AGENTOFFICE" />
+          <End Role="LISTOFFICE" EntitySet="LISTOFFICE" />
+        </AssociationSet>
+        <AssociationSet Name="COLISTAGENT_AGENTOFFICES" Association="RESOServicesModel.COLISTAGENT_AGENTOFFICES">
+          <End Role="AGENTOFFICE" EntitySet="AGENTOFFICE" />
+          <End Role="COLISTAGENT" EntitySet="COLISTAGENT" />
+        </AssociationSet>
+        <AssociationSet Name="ADDRESS_LOCATIONS" Association="RESOServicesModel.ADDRESS_LOCATIONS">
+          <End Role="LOCATION" EntitySet="LOCATION" />
+          <End Role="ADDRESS" EntitySet="ADDRESS" />
+        </AssociationSet>
+        <AssociationSet Name="GIS_LOCATIONS" Association="RESOServicesModel.GIS_LOCATIONS">
+          <End Role="LOCATION" EntitySet="LOCATION" />
+          <End Role="GIS" EntitySet="GIS" />
+        </AssociationSet>
+        <AssociationSet Name="SCHOOL_LOCATIONS" Association="RESOServicesModel.SCHOOL_LOCATIONS">
+          <End Role="LOCATION" EntitySet="LOCATION" />
+          <End Role="SCHOOL" EntitySet="SCHOOL" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

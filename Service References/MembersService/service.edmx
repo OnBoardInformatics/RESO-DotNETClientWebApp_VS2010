@@ -1,0 +1,43 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="RESOServices" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="MEMBER">
+        <Key>
+          <PropertyRef Name="MemberKey" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="MemberKey" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="OriginatingSystemMemberKey" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="OriginatingSystemName" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="MemberMlsId" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="MemberFullName" Type="Edm.String" MaxLength="150" FixedLength="false" Unicode="false" />
+        <Property Name="MemberPreferredPhone" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="MemberOfficePhone" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="MemberCellPhone" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="MemberFax" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="MemberPager" Type="Edm.String" MaxLength="16" FixedLength="false" Unicode="false" />
+        <Property Name="MemberEmail" Type="Edm.String" MaxLength="80" FixedLength="false" Unicode="false" />
+        <Property Name="MemberURL" Type="Edm.String" MaxLength="8000" FixedLength="false" Unicode="false" />
+        <Property Name="MemberStateLicense" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+      </EntityType>
+      <EntityType Name="MEMBER_OUTPUT">
+        <Key>
+          <PropertyRef Name="ProcessDateTime" />
+        </Key>
+        <Property Name="StatusCode" Type="Edm.String" MaxLength="10" FixedLength="false" Unicode="false" />
+        <Property Name="TotalFound" Type="Edm.Int32" />
+        <Property Name="ProcessDateTime" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="Details" Type="Edm.String" MaxLength="Max" FixedLength="false" Unicode="true" />
+      </EntityType>
+    </Schema>
+    <Schema Namespace="RESOServices.Models" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="MemberEntities" m:IsDefaultEntityContainer="true" p6:LazyLoadingEnabled="true" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntitySet Name="MEMBER" EntityType="RESOServices.MEMBER" />
+        <EntitySet Name="MEMBER_OUTPUT" EntityType="RESOServices.MEMBER_OUTPUT" />
+        <FunctionImport Name="Member" ReturnType="Collection(RESOServices.MEMBER)" EntitySet="MEMBER" m:HttpMethod="GET">
+          <Parameter Name="Id" Type="Edm.String" />
+        </FunctionImport>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

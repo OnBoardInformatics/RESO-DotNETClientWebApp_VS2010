@@ -1,0 +1,30 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="RESOServicesModel" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="MESSAGE">
+        <Key>
+          <PropertyRef Name="Status_Code" />
+        </Key>
+        <Property Name="Status_Code" Type="Edm.String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        <Property Name="Short_Description" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="Long_Description" Type="Edm.String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+      </EntityType>
+      <EntityType Name="RESULT">
+        <Key>
+          <PropertyRef Name="ProcessDateTime" />
+        </Key>
+        <Property Name="StatusCode" Type="Edm.String" MaxLength="10" FixedLength="false" Unicode="false" />
+        <Property Name="TotalFound" Type="Edm.Int32" />
+        <Property Name="ProcessDateTime" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="Details" Type="Edm.String" MaxLength="Max" FixedLength="false" Unicode="true" />
+      </EntityType>
+    </Schema>
+    <Schema Namespace="RESOServices.Models" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="SecurityEntities" m:IsDefaultEntityContainer="true" p6:LazyLoadingEnabled="true" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntitySet Name="MESSAGE" EntityType="RESOServicesModel.MESSAGE" />
+        <EntitySet Name="RESULT" EntityType="RESOServicesModel.RESULT" />
+        <FunctionImport Name="ApplicationToken" ReturnType="Collection(RESOServicesModel.RESULT)" EntitySet="RESULT" m:HttpMethod="GET" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
